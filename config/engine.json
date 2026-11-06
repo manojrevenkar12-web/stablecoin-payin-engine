@@ -1,0 +1,138 @@
+{
+  "policy_name": "engine",
+  "reference": {
+    "prefix": "IR-",
+    "length": 6,
+    "max_repair_distance": 1,
+    "require_sender_match_for_repair": true,
+    "exact_only": false
+  },
+  "names": {
+    "sender_match_threshold": 0.9,
+    "variants": [
+      [
+        "MUHAMMAD",
+        "MOHAMMED",
+        "MOHAMMAD",
+        "MOHAMED",
+        "MUHAMMED",
+        "MOHAMAD"
+      ],
+      [
+        "YUSUF",
+        "YOUSSEF",
+        "YOUSEF",
+        "YOUSIF",
+        "JUSUF"
+      ],
+      [
+        "ABDULLAH",
+        "ABDALLAH",
+        "ABDULA"
+      ],
+      [
+        "HUSSEIN",
+        "HUSSAIN",
+        "HUSEIN",
+        "HOSSEIN"
+      ],
+      [
+        "ALEKSANDR",
+        "ALEXANDER",
+        "ALEXANDR",
+        "OLEKSANDR"
+      ],
+      [
+        "SERGEI",
+        "SERGEY",
+        "SERHIY"
+      ],
+      [
+        "DMITRY",
+        "DMITRI",
+        "DMYTRO"
+      ],
+      [
+        "YURI",
+        "YURIY",
+        "IURII"
+      ],
+      [
+        "MIKHAIL",
+        "MICHAIL",
+        "MYKHAILO"
+      ],
+      [
+        "ZHANG",
+        "CHANG"
+      ],
+      [
+        "INTERNATIONAL",
+        "INTL",
+        "INT"
+      ],
+      [
+        "TRADING",
+        "TRADE",
+        "TRDG"
+      ],
+      [
+        "COMPANY",
+        "COMPANIES"
+      ]
+    ]
+  },
+  "screening": {
+    "mode": "fuzzy",
+    "hold_threshold": 0.9,
+    "name_field_limits": [
+      [
+        "Ach",
+        16
+      ]
+    ]
+  },
+  "resend": {
+    "enabled": true,
+    "window_hours": 120
+  },
+  "minimums": [
+    [
+      "USD",
+      100
+    ],
+    [
+      "EUR",
+      100
+    ]
+  ],
+  "hold_third_party_senders": true,
+  "usd_window_open_hour_et": 21,
+  "usd_window_close_hour_et": 17,
+  "chains": [
+    {
+      "name": "ethereum",
+      "confirmations": 12,
+      "resubmit_after_secs": 3600
+    },
+    {
+      "name": "solana",
+      "confirmations": 32,
+      "resubmit_after_secs": 3600
+    }
+  ],
+  "tokens": [
+    {
+      "ccy": "USD",
+      "symbol": "XUSD",
+      "decimals": 6
+    },
+    {
+      "ccy": "EUR",
+      "symbol": "XEUR",
+      "decimals": 6
+    }
+  ],
+  "trace_returned_deposits": true,
+  "ingest_statement_only_credits": true
+}

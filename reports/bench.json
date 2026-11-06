@@ -1,0 +1,23 @@
+{
+  "about": "Engine time in memory per dev world, one core. Varies by machine.",
+  "runs": [
+    {
+      "engine_ms": 665,
+      "inputs": 47367,
+      "inputs_per_sec": 71229.0,
+      "seed": 11
+    },
+    {
+      "engine_ms": 571,
+      "inputs": 47355,
+      "inputs_per_sec": 82933.0,
+      "seed": 12
+    },
+    {
+      "engine_ms": 555,
+      "inputs": 47343,
+      "inputs_per_sec": 85303.0,
+      "seed": 13
+    }
+  ]
+}

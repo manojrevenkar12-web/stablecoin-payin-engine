@@ -1,0 +1,41 @@
+[package]
+name = "stablecoin-payin-engine"
+version = "0.1.0"
+edition = "2024"
+rust-version = "1.85"
+description = "Fiat pay-in to stablecoin mint: bank-rail parsing, deposit routing, screening, a double-entry ledger with a reserve invariant, and three-way reconciliation"
+license = "MIT"
+default-run = "pie"
+
+[[bin]]
+name = "pie"
+path = "src/main.rs"
+
+[dependencies]
+anyhow = "1"
+axum = { version = "0.8", default-features = false, features = ["http1", "json", "query", "tokio"] }
+quick-xml = "0.38"
+serde = { version = "1", features = ["derive"] }
+serde_json = "1"
+sha2 = "0.10"
+tokio = { version = "1", features = ["rt-multi-thread", "macros", "net", "sync", "time"] }
+tokio-postgres = { version = "0.7", features = ["with-serde_json-1"] }
+
+[dev-dependencies]
+tower = { version = "0.5", features = ["util"] }
+
+[profile.dev]
+debug = 0
+opt-level = 1
+
+[profile.dev.package."*"]
+opt-level = 2
+
+[profile.release]
+debug = 0
+
+[lints.clippy]
+# Amounts are written as units_cents (1_234_56 is 1,234.56) on purpose.
+inconsistent_digit_grouping = "allow"
+# The edit-distance table reads more clearly with indices.
+needless_range_loop = "allow"

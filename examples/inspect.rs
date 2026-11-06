@@ -3,7 +3,10 @@
 use stablecoin_payin_engine::{config, sim};
 fn main() {
     let policy = std::env::args().nth(1).unwrap_or("engine".into());
-    let wc = sim::world::WorldCfg::load("world").unwrap();
+    let mut wc = sim::world::WorldCfg::load("world").unwrap();
+    if let Some(s) = std::env::args().nth(3) {
+        wc.seed = s.parse().unwrap();
+    }
     let w = sim::world::generate(&wc);
     let out = sim::run::run(&w, config::load_named(&policy).unwrap(), false);
     let e = &out.engine;

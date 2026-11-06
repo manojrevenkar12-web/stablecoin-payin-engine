@@ -1,0 +1,35 @@
+name: ci
+on: [push, pull_request]
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    services:
+      postgres:
+        image: postgres:16
+        env:
+          POSTGRES_PASSWORD: postgres
+          POSTGRES_DB: pie
+        ports: ["5432:5432"]
+        options: >-
+          --health-cmd "pg_isready -U postgres" --health-interval 5s --health-timeout 5s --health-retries 10
+    env:
+      PIE_DATABASE_URL: host=localhost user=postgres password=postgres dbname=pie
+      CARGO_TERM_COLOR: always
+    steps:
+      - uses: actions/checkout@v4
+      - uses: dtolnay/rust-toolchain@stable
+        with:
+          components: rustfmt, clippy
+      - uses: Swatinem/rust-cache@v2
+      - run: cargo fmt --check
+      - run: cargo clippy --all-targets -- -D warnings
+      - name: tests (rails, routing, ledger, chain, simulated months, properties, Postgres and API)
+        run: cargo test
+      - name: the held-out world is unchanged
+        run: sha256sum -c eval/heldout/v1.sha256 && (cd reports/heldout/v1 && sha256sum -c first_run.sha256)
+      - name: results regenerate exactly
+        run: |
+          cargo run -q -- evaluate
+          git diff --exit-code -- reports/results.json
+      - name: a month through Postgres, rebuilt from the event log
+        run: cargo run -q -- replay-pg --db "$PIE_DATABASE_URL"

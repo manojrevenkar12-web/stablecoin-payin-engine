@@ -77,7 +77,9 @@ fn pct(v: &Value) -> String {
     if of == 0 {
         return "–".into();
     }
-    format!("{:.1}%", 100.0 * n(&v["hit"]) as f64 / of as f64)
+    // Rounded down, so one miss in thousands never shows as 100.0%.
+    let p = (1000.0 * n(&v["hit"]) as f64 / of as f64).floor() / 10.0;
+    format!("{p:.1}%")
 }
 
 fn money(minor: i64, sym: &str) -> String {
@@ -392,7 +394,7 @@ section{margin-top:48px}
 .key{display:flex;flex-wrap:wrap;gap:18px;color:var(--muted);font-size:14px;margin-top:4px}
 .key i{display:inline-block;width:10px;height:10px;border-radius:2px;margin-right:6px;vertical-align:baseline}
 .tiles{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:1px;background:var(--line);border:1px solid var(--line);border-radius:6px;overflow:hidden;margin-top:16px}
-.tile{background:var(--bg);padding:16px 18px}.tile .v{font-size:26px;font-weight:700;font-variant-numeric:tabular-nums}.tile .l{font-weight:600;margin-top:2px}.tile .n{color:var(--muted);font-size:14px}
+.tile{background:var(--bg);padding:16px 18px}.tile:last-child:nth-child(4n+1){grid-column:1/-1}.tile .v{font-size:26px;font-weight:700;font-variant-numeric:tabular-nums}.tile .l{font-weight:600;margin-top:2px}.tile .n{color:var(--muted);font-size:14px}
 table{width:100%;border-collapse:collapse;margin-top:16px;font-size:15px}
 th{text-align:left;font-weight:600;color:var(--muted);border-bottom:1px solid var(--line);padding:8px 10px 8px 0}
 td{border-bottom:1px solid var(--line);padding:8px 10px 8px 0;vertical-align:top}

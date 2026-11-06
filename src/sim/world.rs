@@ -656,7 +656,9 @@ fn plan_payments(
             }
             // Pick the Autoramp the sender means to pay.
             let mut ar: &Autoramp = match &kind {
-                Kind::ReferenceReformatted | Kind::ReferenceTypoByCustomer | Kind::ReferenceTypoByStranger | Kind::ReferenceMissing => rng.pick::<&Autoramp>(&pbr_live),
+                Kind::ReferenceReformatted | Kind::ReferenceTypoByCustomer | Kind::ReferenceTypoByStranger | Kind::ReferenceMissing => {
+                    rng.pick::<&Autoramp>(&pbr_live)
+                }
                 Kind::ReferenceTypoAmbiguous if !twins.is_empty() => rng.pick(&twins).0,
                 Kind::CancelledAutoramp if !suspended_ars.is_empty() && rng.chance(0.3) => {
                     kind = Kind::SuspendedCustomer;

@@ -1,0 +1,425 @@
+{
+  "baseline": {
+    "below_minimum_rejected": {
+      "hit": 9,
+      "of": 9
+    },
+    "by_kind": {
+      "BelowMinimum": [
+        9,
+        9
+      ],
+      "CancelledAutoramp": [
+        15,
+        15
+      ],
+      "Clean": [
+        1011,
+        1010
+      ],
+      "CustomerResend": [
+        26,
+        1
+      ],
+      "EddCustomer": [
+        150,
+        150
+      ],
+      "LegitRepeat": [
+        21,
+        21
+      ],
+      "NearMissInnocent": [
+        40,
+        40
+      ],
+      "ReferenceExact": [
+        941,
+        940
+      ],
+      "ReferenceMissing": [
+        17,
+        17
+      ],
+      "ReferenceReformatted": [
+        168,
+        0
+      ],
+      "ReferenceTypoAmbiguous": [
+        13,
+        13
+      ],
+      "ReferenceTypoByCustomer": [
+        58,
+        0
+      ],
+      "ReferenceTypoByStranger": [
+        28,
+        28
+      ],
+      "SanctionedExact": [
+        4,
+        4
+      ],
+      "SanctionedVariant": [
+        14,
+        6
+      ],
+      "SuspendedCustomer": [
+        5,
+        5
+      ],
+      "ThirdPartyAllowed": [
+        345,
+        345
+      ],
+      "ThirdPartyNotAllowed": [
+        31,
+        1
+      ],
+      "UnknownAccount": [
+        11,
+        11
+      ]
+    },
+    "chain_supply_breaks": 0,
+    "correct_outcome": {
+      "hit": 2616,
+      "of": 2907
+    },
+    "corrupt_files_quarantined": {
+      "hit": 4,
+      "of": 4
+    },
+    "credited_against_policy": {
+      "eur_minor": 104304024,
+      "n": 63,
+      "usd_minor": 103430383
+    },
+    "credited_when_due": {
+      "hit": 2506,
+      "of": 2734
+    },
+    "deposits": 2907,
+    "deposits_booked_once": {
+      "hit": 2907,
+      "of": 2907
+    },
+    "duplicate_mints": {
+      "eur_minor": 44611141,
+      "n": 25,
+      "usd_minor": 22506038
+    },
+    "edd_held": {
+      "hit": 159,
+      "of": 173
+    },
+    "engine_ms": 408,
+    "false_holds": {},
+    "false_holds_per_1000": 0.0,
+    "fees_found": {
+      "hit": 18,
+      "of": 18
+    },
+    "files_processed": 1505,
+    "holds_opened": 172,
+    "hours_to_mint_p50": {
+      "EUR": 1.2,
+      "USD": 1.1
+    },
+    "hours_to_mint_p90": {
+      "EUR": 1.8,
+      "USD": 3.1
+    },
+    "inputs": 53943,
+    "inputs_per_sec": 132213.0,
+    "min_reserve_headroom_minor": {
+      "EUR": 0,
+      "USD": 0
+    },
+    "mint_resubmissions": 4,
+    "mints_final_once": {
+      "hit": 2569,
+      "of": 2569
+    },
+    "misrouted": {
+      "eur_minor": 0,
+      "n": 0,
+      "usd_minor": 0
+    },
+    "normalised_references": 0,
+    "payout_returns_processed": {
+      "hit": 7,
+      "of": 7
+    },
+    "policy": "baseline",
+    "recon_days": 34,
+    "redemptions_completed": 300,
+    "renotifications_ignored": {
+      "hit": 48,
+      "of": 48
+    },
+    "reorg_dropped_mints": 4,
+    "reorg_reincluded_mints": 5,
+    "reorgs_past_confirmation": 0,
+    "repaired_references": 0,
+    "resends_held": {
+      "hit": 0,
+      "of": 26
+    },
+    "reserve_coverage_breaks": 0,
+    "sanctions_held": {
+      "hit": 10,
+      "of": 18
+    },
+    "sanctions_variants_held": {
+      "hit": 6,
+      "of": 14
+    },
+    "seed": 9001,
+    "statement_only_recovered": {
+      "hit": 0,
+      "of": 3
+    },
+    "third_party_held": {
+      "hit": 0,
+      "of": 31
+    },
+    "trace_all": {
+      "hit": 2590,
+      "of": 2907
+    },
+    "trace_returned": {
+      "hit": 2,
+      "of": 316
+    },
+    "trial_balance_zero": true,
+    "unexplained_balance_breaks": 0,
+    "usd_conversions_outside_window": 0,
+    "volume": {
+      "eur_minor": 5237993410,
+      "n": 2907,
+      "usd_minor": 6150877624
+    },
+    "world": "heldout-v1",
+    "wrongly_returned": {
+      "eur_minor": 461362584,
+      "n": 225,
+      "usd_minor": 495323649
+    }
+  },
+  "commit": "cebcf19",
+  "engine": {
+    "below_minimum_rejected": {
+      "hit": 9,
+      "of": 9
+    },
+    "by_kind": {
+      "BelowMinimum": [
+        9,
+        9
+      ],
+      "CancelledAutoramp": [
+        15,
+        15
+      ],
+      "Clean": [
+        1011,
+        1011
+      ],
+      "CustomerResend": [
+        26,
+        26
+      ],
+      "EddCustomer": [
+        150,
+        150
+      ],
+      "LegitRepeat": [
+        21,
+        21
+      ],
+      "NearMissInnocent": [
+        40,
+        40
+      ],
+      "ReferenceExact": [
+        941,
+        941
+      ],
+      "ReferenceMissing": [
+        17,
+        17
+      ],
+      "ReferenceReformatted": [
+        168,
+        168
+      ],
+      "ReferenceTypoAmbiguous": [
+        13,
+        13
+      ],
+      "ReferenceTypoByCustomer": [
+        58,
+        58
+      ],
+      "ReferenceTypoByStranger": [
+        28,
+        28
+      ],
+      "SanctionedExact": [
+        4,
+        4
+      ],
+      "SanctionedVariant": [
+        14,
+        13
+      ],
+      "SuspendedCustomer": [
+        5,
+        5
+      ],
+      "ThirdPartyAllowed": [
+        345,
+        345
+      ],
+      "ThirdPartyNotAllowed": [
+        31,
+        31
+      ],
+      "UnknownAccount": [
+        11,
+        11
+      ]
+    },
+    "chain_supply_breaks": 0,
+    "correct_outcome": {
+      "hit": 2906,
+      "of": 2907
+    },
+    "corrupt_files_quarantined": {
+      "hit": 4,
+      "of": 4
+    },
+    "credited_against_policy": {
+      "eur_minor": 0,
+      "n": 1,
+      "usd_minor": 2717335
+    },
+    "credited_when_due": {
+      "hit": 2734,
+      "of": 2734
+    },
+    "deposits": 2907,
+    "deposits_booked_once": {
+      "hit": 2907,
+      "of": 2907
+    },
+    "duplicate_mints": {
+      "eur_minor": 0,
+      "n": 0,
+      "usd_minor": 0
+    },
+    "edd_held": {
+      "hit": 173,
+      "of": 173
+    },
+    "engine_ms": 880,
+    "false_holds": {
+      "possible_resend": 30
+    },
+    "false_holds_per_1000": 10.3,
+    "fees_found": {
+      "hit": 18,
+      "of": 18
+    },
+    "files_processed": 1505,
+    "holds_opened": 277,
+    "hours_to_mint_p50": {
+      "EUR": 1.2,
+      "USD": 0.6
+    },
+    "hours_to_mint_p90": {
+      "EUR": 1.8,
+      "USD": 2.4
+    },
+    "inputs": 54048,
+    "inputs_per_sec": 61418.0,
+    "min_reserve_headroom_minor": {
+      "EUR": 0,
+      "USD": 0
+    },
+    "mint_resubmissions": 4,
+    "mints_final_once": {
+      "hit": 2735,
+      "of": 2735
+    },
+    "misrouted": {
+      "eur_minor": 0,
+      "n": 0,
+      "usd_minor": 0
+    },
+    "normalised_references": 168,
+    "payout_returns_processed": {
+      "hit": 7,
+      "of": 7
+    },
+    "policy": "engine",
+    "recon_days": 34,
+    "redemptions_completed": 300,
+    "renotifications_ignored": {
+      "hit": 48,
+      "of": 48
+    },
+    "reorg_dropped_mints": 4,
+    "reorg_reincluded_mints": 5,
+    "reorgs_past_confirmation": 0,
+    "repaired_references": 58,
+    "resends_held": {
+      "hit": 26,
+      "of": 26
+    },
+    "reserve_coverage_breaks": 0,
+    "sanctions_held": {
+      "hit": 17,
+      "of": 18
+    },
+    "sanctions_variants_held": {
+      "hit": 13,
+      "of": 14
+    },
+    "seed": 9001,
+    "statement_only_recovered": {
+      "hit": 3,
+      "of": 3
+    },
+    "third_party_held": {
+      "hit": 31,
+      "of": 31
+    },
+    "trace_all": {
+      "hit": 2907,
+      "of": 2907
+    },
+    "trace_returned": {
+      "hit": 146,
+      "of": 146
+    },
+    "trial_balance_zero": true,
+    "unexplained_balance_breaks": 0,
+    "usd_conversions_outside_window": 0,
+    "volume": {
+      "eur_minor": 5237993410,
+      "n": 2907,
+      "usd_minor": 6150877624
+    },
+    "world": "heldout-v1",
+    "wrongly_returned": {
+      "eur_minor": 0,
+      "n": 0,
+      "usd_minor": 0
+    }
+  },
+  "set": "v1",
+  "world_sha256": "f22b7ab98d02b76fbf5c697722260d621356f02d3df172b0873055fc435e1cba"
+}
